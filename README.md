@@ -1,86 +1,66 @@
-# 🧩 Config Vincent
+# 🧩 Shared Config
 
-📦 Templates de configuration partagés pour projets JavaScript/TypeScript modernes :  
-**Nuxt 3, Next.js App Router, Prettier, ESLint Flat Config, Tailwind v4 ready.**
-
----
-
-## 📁 Structure du repo
-
-```
-config-vincent/
-├── shared/             # Fichiers communs à tous les projets (Prettier, .editorconfig, VSCode)
-├── templates/
-│   ├── nuxt/           # Configs spécifiques Nuxt 3 (ESLint, Prettier, VSCode)
-│   └── next/           # Configs spécifiques Next.js App Router (ESLint, Prettier, VSCode)
-```
+📦 Base de configuration réutilisable pour projets Nuxt 3, Next.js App Router, avec :
+- ESLint (Flat config)
+- Prettier + plugin Tailwind CSS
+- `.editorconfig` et `.vscode/settings.json` standard
+- Structure de projet pré-organisée
 
 ---
 
-## ⚡ Utilisation
+## 📦 Templates disponibles
 
-1. **Crée ton projet comme d'habitude** :
+- [`templates/nuxt`](./templates/nuxt) — Nuxt 3 avec structure Atom/Molecule/Organism, composables, plugins, domain logic, etc.
+- [`templates/next`](./templates/next) — Next.js avec App Router (React 19 ready)
+
+---
+
+## 🚀 Utilisation (avec [pnpm](https://pnpm.io))
+
+### Nuxt 3 :
 
 ```bash
-pnpm create nuxt@latest     # ou
-npx create-next-app mon-app
+pnpm create nuxt@latest
 cd mon-app
+degit triplecasquette/shared-config/templates/nuxt . --force
+pnpm install
 ```
 
-2. **Ajoute les fichiers de config depuis ce repo** :
-
-### ➕ Pour Nuxt :
+### Next.js :
 
 ```bash
-npx degit vincent/config-vincent/templates/nuxt .
-```
-
-### ➕ Pour Next :
-
-```bash
-npx degit vincent/config-vincent/templates/next .
-```
-
-3. **Installe les dépendances nécessaires** :
-
-### 🔧 Dépendances communes
-
-```bash
-pnpm add -D prettier prettier-plugin-tailwindcss eslint \
-  eslint-plugin-unused-imports @typescript-eslint/eslint-plugin @typescript-eslint/parser
-```
-
-### ➕ Nuxt :
-
-```bash
-pnpm add -D eslint-plugin-vue
-```
-
-### ➕ Next :
-
-```bash
-pnpm add -D eslint-plugin-react
+pnpm create next-app mon-app
+cd mon-app
+pnpm dlx degit triplecasquette/shared-config/templates/next . --force
+pnpm install
 ```
 
 ---
 
-## 📁 Détail des fichiers
+## 📁 Fichiers partagés
 
-| Fichier                  | Description |
-|--------------------------|-------------|
-| `eslint.config.mjs`      | ESLint Flat Config propre au framework |
-| `prettier.config.cjs`    | Config Prettier avec plugin Tailwind |
-| `.vscode/settings.json`  | Formatage automatique sans extensions |
-| `.editorconfig`          | Standardisation des espaces/retours à la ligne |
+| Fichier                      | Description |
+|------------------------------|-------------|
+| `prettier.config.cjs`        | Config Prettier standardisée, avec plugin Tailwind |
+| `.editorconfig`              | Indentation 2 espaces, UTF-8, fin de ligne LF |
+| `.vscode/settings.json`      | Formatage automatique, règles Tailwind activées |
+
+---
+
+## 🧠 Astuces
+
+- Les fichiers partagés sont en symlink dans chaque template → **modifie uniquement `shared/`**
+- `degit` les transforme en vrais fichiers lors de l'installation
+- Pour tester localement : crée un projet Nuxt/Next et applique la commande `pnpm dlx degit`
 
 ---
 
 ## 🔮 Pourquoi ce repo ?
 
 - 🔁 **Réutilisable** sur tous les projets
-- ✅ **Zéro dépendance magique**
+- ✅ **Zéro dépendance**
 - 🧼 **Fichiers copiés en clair**, modifiables localement
-- 💡 Compatible Nuxt 3, Next.js 14, Tailwind CSS v4, ESLint Flat, Prettier stable
+- 💡 Compatible Nuxt 3, Next.js 15, Tailwind CSS v4, ESLint Flat, Prettier stable
 
 ---
 
