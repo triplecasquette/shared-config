@@ -5,6 +5,7 @@
 - Prettier + plugin Tailwind CSS
 - `.editorconfig` et `.vscode/settings.json` standard
 - Structure de projet pré-organisée
+- Script de theme coloré peacock / Vscode pour distinguer les projets
 
 ---
 
@@ -29,9 +30,9 @@ pnpm install
 ### Next.js :
 
 ```bash
-pnpm create next-app mon-app
+npx create-next-app@latest
 cd mon-app
-pnpm dlx degit triplecasquette/shared-config/templates/next . --force
+degit triplecasquette/shared-config/templates/next . --force
 pnpm install
 ```
 
@@ -41,9 +42,11 @@ pnpm install
 
 | Fichier                      | Description |
 |------------------------------|-------------|
-| `prettier.config.cjs`        | Config Prettier standardisée, avec plugin Tailwind |
-| `.editorconfig`              | Indentation 2 espaces, UTF-8, fin de ligne LF |
-| `.vscode/settings.json`      | Formatage automatique, règles Tailwind activées |
+| `prettier.config.cjs`        | Configuration Prettier avec plugin Tailwind, style cohérent sur tous les projets |
+| `.editorconfig`              | Indentation 2 espaces, UTF-8, sauts de ligne LF, sans trailing spaces |
+| `.vscode/settings.json`      | Format on save, tri des imports, support Tailwind, pas besoin d’extensions Prettier/ESLint |
+| `.vscode/generate-vscode-theme.ts` | Script TypeScript pour générer un thème VSCode basé sur une couleur principale |
+| `.vscode/README.md`          | Explication du script de thème et instructions d’utilisation |
 
 ---
 

@@ -1,0 +1,1 @@
+../../../shared/.vscode/generate-vscode-theme.ts

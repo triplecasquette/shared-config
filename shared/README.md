@@ -3,9 +3,12 @@
 Fichiers de configuration communs à tous les projets (Nuxt 3, Next.js, etc.)
 
 ### Contenu :
-- `prettier.config.cjs` avec plugin Tailwind CSS intégré
-- `.editorconfig` standard (2 espaces, UTF-8, LF)
-- `.vscode/settings.json` minimaliste (format on save, Tailwind, etc.)
+- `prettier.config.cjs` — Configuration Prettier standardisée avec plugin Tailwind intégré (2 espaces, trailing comma, etc.)
+- `.editorconfig` — Convention globale : UTF-8, LF, indentation 2 espaces, suppression des espaces inutiles
+- `.vscode/settings.json` — Format automatique à la sauvegarde, tri des imports, prise en charge de Tailwind sans extensions nécessaires
+- `.vscode/generate-vscode-theme.ts` — Script Node/TS pour générer une palette VSCode à partir d’une couleur principale
+- `.vscode/README.md` — Documentation du script de thème et instructions d’usage
+
 
 ---
 
