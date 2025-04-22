@@ -10,7 +10,7 @@ Cela crée un fichier `.vscode/theme.generated.json` avec :
 ### ▶️ Génération du thème
 
 ```bash
-pnpm dlx tsx ./vscode/generate-vscode-theme.ts
+pnpm dlx tsx ./.vscode/generate-vscode-theme.ts
 ```
 
 Le résultat sera disponible dans `.vscode/theme.generated.json`, prêt à être copié dans `.vscode/settings.json`.
