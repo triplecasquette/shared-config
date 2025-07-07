@@ -12,7 +12,5 @@ Inclut :
 ```bash
 npx degit vincent/config-vincent/templates/next .
 
-pnpm add -D eslint prettier prettier-plugin-tailwindcss \
-  eslint-plugin-react eslint-plugin-unused-imports \
-  @typescript-eslint/eslint-plugin @typescript-eslint/parser
+pnpm add -D eslint @eslint/eslintrc eslint-config-prettier @next/eslint-plugin-next eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-tailwindcss
 ```
